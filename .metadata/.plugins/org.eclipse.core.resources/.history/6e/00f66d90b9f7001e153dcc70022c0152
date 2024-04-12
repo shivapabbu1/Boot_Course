@@ -1,0 +1,27 @@
+package com.Boot.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+@SpringBootApplication
+public class BootDiIocApplication {
+
+	public static void main(String[] args) {
+		
+		SpringApplication.run(BootDiIocApplication.class, args);
+        
+       
+        
+      
+ //  -------> Tight Coupling --> we dont use @component annotation in class  of Customer
+		
+         // Direct instantiation of Customer class
+        Customer d = new Customer();
+       System.out.println( d.data()); 
+		
+		
+      
+    }
+
+}

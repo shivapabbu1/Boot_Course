@@ -1,0 +1,88 @@
+package com.EMS.demo.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.EMS.demo.Entity.Employee;
+import com.EMS.demo.Service.EmployeService;
+import com.EMS.demo.serviceImpl.EmployeServiceImpl;
+
+@RestController
+@RequestMapping("/")
+public class EmployeeController {
+	
+//	private EmployeService employeService;
+//	
+//	public EmployeeController(EmployeService employeService) {
+//		this.employeService=employeService;
+//	}
+//	
+//	@PostMapping("newEmp")
+//	public  Employee createNewEmp(@RequestBody Employee employee) {
+//		return employeService.getNewEmp(employee);
+//	}
+//	
+//	@GetMapping("Allemps")
+//	public List<Employee> getListEmps() {
+//     return employeService.getAllEmps();
+//	
+//	}
+//	
+//	@GetMapping("Emp/{id}")
+//	public Employee getEmpById(@PathVariable int id) {
+//		return employeService.findoutById(id);
+//	}
+//	
+//	
+//	@PutMapping("Emp/{id}")
+//	public Employee updateEmployeeById(@PathVariable int id, @RequestBody Employee employee) {
+//        Employee updatedEmployee = employeService.updateById(id, employee);
+//        if (updatedEmployee != null) {
+//            return updatedEmployee; 
+//        }
+//		return null; 
+//		}
+//	
+//	@DeleteMapping("Emp/{id}")
+//	public String removeEmp(@PathVariable int id) {
+//		employeService.deleteByid(id);
+//		return "Sucessfully Removed your emp";
+//	}
+
+	@Autowired
+	private EmployeServiceImpl a;
+	
+	@GetMapping("Allemps")
+	public List<Employee> getListEmps() {
+	     return  a.getAllEmps();
+
+	}
+	@PostMapping("newEmp")
+	public  Employee createNewEmp(@RequestBody Employee employee) {
+		return a.getNewEmp(employee);
+	}
+	
+	
+	 @GetMapping("Emp/{id}")
+		public Employee getemp(@PathVariable int id) {
+			return a.findoutById(id);
+		
+	}
+	
+	
+	
+	@PutMapping("Emp/{id}")
+	public Employee update(@PathVariable int id, @RequestBody Employee employee) {
+		return a.updateById(id, employee);
+	}
+}

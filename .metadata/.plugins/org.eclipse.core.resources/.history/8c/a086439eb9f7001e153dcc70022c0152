@@ -1,0 +1,8 @@
+package com.Boot.demo.controller;
+
+public class Car {
+	public String getCar() {
+		 return "New Car Manfactured...";
+	}
+ 
+}

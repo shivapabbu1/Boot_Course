@@ -1,0 +1,23 @@
+package com.BootBeanConfig.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.BootBeanConfig.demo.service.Honda;
+import com.BootBeanConfig.demo.service.Tata;
+
+@SpringBootApplication
+public class BootBeanConfigApplication {
+
+	
+	public static void main(String[] args) {
+		var context=SpringApplication.run(BootBeanConfigApplication.class, args);
+	Tata tata=	 context.getBean(Tata.class);
+	 System.out.println(tata.getCar());
+	 
+	 Honda honda=	 context.getBean(Honda.class);
+	 System.out.println(honda.getCar());
+	 
+	}
+
+}

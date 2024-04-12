@@ -1,0 +1,24 @@
+spring.application.name=EMS_H2_Database
+server.port=6001
+
+# Activate H2 profile
+spring.profiles.active=h2
+
+# H2 database configuration
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=password
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+# Uncomment to use MySQL database configuration
+#spring.profiles.active=mysql
+
+# MySQL database configuration
+# mysql.datasource.url=jdbc:mysql://localhost:3306/employeemanagmentsysytem
+# mysql.datasource.username=root
+# mysql.datasource.password=Master@123
+# mysql.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+# mysql.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+
+# spring.jpa.hibernate.ddl-auto=update

@@ -1,0 +1,17 @@
+package com.EMS.demo.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.EMS.demo.Entity.Employee;
+
+public interface EmployeService {
+
+	 List<Employee> getAllEmp();
+	 Employee createNewEmp(Employee employee);
+	 
+	 Optional<Employee> updateEmp(int id);
+	 
+	 void deleteEmp(int id);
+	
+}

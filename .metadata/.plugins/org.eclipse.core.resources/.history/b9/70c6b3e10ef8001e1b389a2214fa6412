@@ -1,0 +1,2 @@
+spring.application.name=EMS_H2_Database
+server.port=6001

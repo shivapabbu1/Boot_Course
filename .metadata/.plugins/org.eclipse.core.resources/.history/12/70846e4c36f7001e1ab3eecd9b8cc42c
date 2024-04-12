@@ -1,0 +1,19 @@
+package com.Boot.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class CustomerController {
+
+	private Customer c;
+	
+	@Autowired
+	public CustomerController(Customer c) {
+		this.c =c;
+	}
+	
+	public void GetName() {
+		c.fullName();
+	}
+	
+
+}

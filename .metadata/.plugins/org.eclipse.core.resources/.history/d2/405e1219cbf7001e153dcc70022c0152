@@ -1,0 +1,13 @@
+package com.Boot_BeanLifeCycle.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class BootBeanLifeCycleApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BootBeanLifeCycleApplication.class, args);
+	}
+
+}

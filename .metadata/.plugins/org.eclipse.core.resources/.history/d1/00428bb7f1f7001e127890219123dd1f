@@ -1,0 +1,22 @@
+package com.BootBeanConfig.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.BootBeanConfig.demo.service.Car;
+
+@Controller
+public class CarController {
+ 
+	@Autowired
+	private Car car;
+	
+	
+	public CarController(Car car) {
+		this.car=car;
+	}
+	
+	public String getCar() {
+		return car.getCar();
+	}
+}

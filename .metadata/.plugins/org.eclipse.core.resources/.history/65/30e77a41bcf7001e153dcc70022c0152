@@ -1,0 +1,25 @@
+package com.Boot.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.Boot.demo.controller.Car;
+
+
+@SpringBootApplication
+public class BootDiIocApplication {
+
+	public static void main(String[] args) {
+		
+	 var context =	SpringApplication.run(BootDiIocApplication.class, args);
+      Car car=context.getBean(Car.class);  
+      System.out.println(car.getCar());
+       
+        
+      
+
+		
+      
+    }
+
+}

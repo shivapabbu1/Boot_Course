@@ -1,0 +1,5 @@
+package com.EMS.demo.configuration;
+
+public class H2Config {
+
+}

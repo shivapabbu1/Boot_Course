@@ -1,0 +1,13 @@
+package com.Boot_BeansScope.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class BootBeansScopeApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BootBeansScopeApplication.class, args);
+	}
+
+}

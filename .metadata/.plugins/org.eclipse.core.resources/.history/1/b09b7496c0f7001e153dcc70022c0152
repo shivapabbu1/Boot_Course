@@ -1,0 +1,5 @@
+package com.BootBeanConfig.dem.controller;
+
+public class CarController {
+
+}

@@ -1,0 +1,28 @@
+package com.EMS.demo.serviceImpl;
+
+import java.util.List;
+
+import com.EMS.demo.Entity.Employee;
+import com.EMS.demo.Repo.EmployeeRepo;
+import com.EMS.demo.Service.EmployeService;
+
+public class EmployeServiceImpl implements EmployeService {
+	
+	private EmployeeRepo employeeRepo;
+	
+	public EmployeServiceImpl(EmployeeRepo employeeRepo) {
+		this.employeeRepo=employeeRepo;
+	}
+
+	@Override
+	public List<Employee> getAllEmp() {
+		return employeeRepo.findAll();
+	}
+
+	@Override
+	public Employee createNewEmp(Employee employee) {
+		
+		return employeeRepo.save(employee);
+	}
+
+}

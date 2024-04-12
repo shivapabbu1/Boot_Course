@@ -1,0 +1,5 @@
+package com.BootBeanConfig.demo.config;
+
+public class AppConfig {
+
+}

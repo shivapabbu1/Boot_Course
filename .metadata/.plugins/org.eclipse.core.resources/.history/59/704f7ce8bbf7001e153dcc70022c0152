@@ -1,0 +1,44 @@
+package com.Boot.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class CustomerController {
+ 
+//	-->Field Injection:
+	
+//	@Autowired
+//	private Customer c;
+//	
+//	public String getdataByFeild() {
+//		return c.data();
+//	}
+	
+//	-->Constructor Injection:
+	
+//	private Customer c;
+//	@Autowired
+//	public CustomerController(Customer c) {
+//		this.c=c;
+//	}
+//	
+//	public String getdataByConstructor() {
+//		return c.data();
+//	}
+	
+	
+//	-->Setter Injection
+	
+	private Customer c;
+	
+	@Autowired 
+	public void SetterInject(Customer c) {
+		this.c=c;
+	}
+	public String getdataBySetter() {
+		return c.data();
+	}
+	
+	
+	
+
+}

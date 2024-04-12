@@ -1,0 +1,12 @@
+package com.Boot.demo.service;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Toyato {
+	
+	public String getToyato() {
+		return "Toyato car Manfactured";
+	}
+
+}

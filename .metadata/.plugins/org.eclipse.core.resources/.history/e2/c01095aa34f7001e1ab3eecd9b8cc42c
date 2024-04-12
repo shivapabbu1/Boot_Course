@@ -1,0 +1,43 @@
+package com.Boot.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+@SpringBootApplication
+public class BootDiIocApplication {
+
+	public static void main(String[] args) {
+		
+//		// Creating the Spring application context
+//        ConfigurableApplicationContext context = SpringApplication.run(BootDiIocApplication.class, args);
+//        
+//        // object that is an instance of the Customer class from the Spring application context
+//        Customer c = context.getBean(Customer.class);
+//        
+//        // Setting values for the name and surname properties of the Customer object
+//        c.setName("John");
+//        c.setSurname("Doe");
+//        
+//        // Calling the fullName method of the Customer object
+//        c.fullName(); 
+//        
+      
+ //  -------> Tight Coupling --> we dont use @component annotation in class  of Customer
+        
+//        // Direct instantiation of Customer class
+//        Customer d = new Customer();
+//        
+//        // Setting values for the name and surname properties directly
+//        d.setName("Johny");
+//        d.setSurname("Doeppp");
+//        
+//        // Calling the fullName method directly
+//        d.fullName(); 
+		
+		ConfigurableApplicationContext context = SpringApplication.run(BootDiIocApplication.class, args);
+        CustomerService customerService = context.getBean(CustomerService.class);
+        customerService.printCustomerFullName();
+    }
+
+}

@@ -1,0 +1,25 @@
+package com.Boot.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class CustomerController {
+ 
+	String a ="ran";
+	private Customer c;
+	
+	@Autowired
+	public CustomerController(Customer c) {
+		this.c =c;
+	}
+	
+	@Autowired
+	public Customer SetName(a ) {
+		this.a =a;
+	}
+	
+	public void GetName() {
+		c.fullName();
+	}
+	
+
+}

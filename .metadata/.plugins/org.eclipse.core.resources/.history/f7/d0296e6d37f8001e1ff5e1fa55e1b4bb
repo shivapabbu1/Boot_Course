@@ -1,0 +1,12 @@
+spring.application.name=EMS_H2_Database
+server.port=6001
+
+# H2 database configuration
+spring.datasource.url=jdbc:h2:file:C:/Users/91913/OneDrive/Desktop/H2-DB/testdb
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=pass
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+
+

@@ -1,0 +1,5 @@
+package com.EMS.demo.Entity;
+
+public class Employee {
+
+}

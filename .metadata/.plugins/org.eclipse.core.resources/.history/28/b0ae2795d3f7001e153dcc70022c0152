@@ -1,0 +1,8 @@
+package com.Boot.demo.service;
+
+public class Nexa {
+
+	public String getCarByNexa() {
+		return "new nexa car by tight couple";
+	}
+}

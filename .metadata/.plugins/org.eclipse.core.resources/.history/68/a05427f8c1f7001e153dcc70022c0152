@@ -1,0 +1,10 @@
+package com.BootBeanConfig.demo.service;
+
+public class Honda implements Car{
+
+	@Override
+	public void getCar() {
+	  System.out.println("new Tata car got");
+	}
+
+}
