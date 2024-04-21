@@ -1,8 +1,0 @@
-package com.Boot_BeansScope.demo;
-
-public class SingletonScope {
-	
-	public  void getScope() {
-		System.out.println("SingletonScope BEAN CREATED");
-	}
-}

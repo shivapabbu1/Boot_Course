@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.Boot.demo.Customer"/>
-    <fullyQualifiedTypeName name="com.Boot.demo.CustomerController"/>
-    <fullyQualifiedTypeName name="com.Boot.demo.controller.Car"/>
-    <fullyQualifiedTypeName name="com.Boot.demo.service.Toyato"/>
-    <fullyQualifiedTypeName name="com.Boot.demo.service.Honda"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
     <fullyQualifiedTypeName name="com.BootBeanConfig.demo.service.Tata"/>
     <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
@@ -29,7 +24,6 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Primary"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
     <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="jakarta.annotation.Generated"/>
@@ -57,4 +51,13 @@
     <fullyQualifiedTypeName name="com.EMS.demo.Entity.Employee"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+    <fullyQualifiedTypeName name="com.JWT_Security.demo.filter.JwtFilter"/>
+    <fullyQualifiedTypeName name="com.JWT_Security.demo.services.jwtService"/>
+    <fullyQualifiedTypeName name="com.JWT_Security.demo.entity.AuthRequest"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="com.JWT_Security.demo.services.JwtService"/>
+    <fullyQualifiedTypeName name="com.JWT_Security.demo.services.UserInfoService"/>
+    <fullyQualifiedTypeName name="com.JWT_Security.demo.repository.UserInfoRepository"/>
+    <fullyQualifiedTypeName name="com.JWT_Security.demo.entity.UserInfo"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
 </qualifiedTypeNameHistroy>
