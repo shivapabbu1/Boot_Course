@@ -48,6 +48,7 @@ public class UserController {
             throw new UsernameNotFoundException("Invalid user request");
         }
     }
+    
     @GetMapping("/getUsers")
     @PreAuthorize("hasAuthority('ADMIN')")
     public List<UserInfo> getAllUsers(){
