@@ -67,16 +67,29 @@ public class SecurityConfig {
 						.requestMatchers("/","/login","/data","/save","/sessdata","/log").permitAll()
 						.anyRequest().authenticated()
 						)
-				.httpBasic(Customizer.withDefaults())
-//				.formLogin((form)->form
-//						.loginPage("/login").permitAll())
+			
 				.securityContext((sc)->sc
 						.securityContextRepository(contextRepository)
 						)
-				.build();
-	}
+				.formLogin(
+						(form) -> form.loginPage("/log")
+						.usernameParameter("username").passwordParameter("password")
 
-	
+								.successHandler((request, response, authentication) -> {
+									if (authentication.getAuthorities().stream()
+											.anyMatch(auth -> auth.getAuthority().equals("ROLE_ADMIN"))) {
+										response.sendRedirect("/admin");
+									} else if (authentication.getAuthorities().stream()
+											.anyMatch(auth -> auth.getAuthority().equals("ROLE_USER"))) {
+										response.sendRedirect("/user");
+									}else {
+										response.sendRedirect("/manager");
+									}
+								}))
+
+				.httpBasic(Customizer.withDefaults())
+				.build();
+	    }
 
 	@Bean
 	public HttpSessionEventPublisher  httpSessionEventPublisher() {

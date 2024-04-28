@@ -62,7 +62,16 @@ public class Rest {
         HttpSession session = request.getSession();
         return "user" + " " + session.getId();
     }
-
+    @GetMapping("/admin")
+    public String getAdm(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        return "adm" + " " + session.getId();
+    }
+    @GetMapping("/manager")
+    public String getMng(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        return "adm" + " " + session.getId();
+    }
     @GetMapping("/data")
     public List<PersonInfo> getData() {
         return contextRepo.findAll();
