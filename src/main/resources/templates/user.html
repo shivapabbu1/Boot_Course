@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Page</title>
+</head>
+<body>
+    <h1 th:text="${message}"></h1>
+    <!-- Display sessionId if it's added to the model -->
+    <p th:if="${sessionId}" th:text="'Session ID: ' + ${sessionId}"></p>
+</body>
+</html>
