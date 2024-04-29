@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Active Sessions</title>
+</head>
+<body>
+    <h1>Active Sessions</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Session ID</th>
+                <th>Username</th>
+                <th>Creation Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="session : ${activeSessions}">
+                <td th:text="${session.sessionId}"></td>
+                <td th:text="${session.username}"></td>
+                <td th:text="${session.creationTime}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+

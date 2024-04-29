@@ -55,20 +55,23 @@ public class Rest {
         return contextRepo.save(personInfo);
     }
 
-//    @PostMapping("/login")
-//    public void login(@RequestBody RequestDto requestDto, HttpServletRequest request, HttpServletResponse response) {
-//        Authentication authentication = authenticationManager.authenticate(
-//                new UsernamePasswordAuthenticationToken(requestDto.getUsername(), requestDto.getPassword()));
-//        SecurityContextHolder.getContext().setAuthentication(authentication);
-//        securityContextRepository.saveContext(SecurityContextHolder.getContext(), request, response);
-//    }
+
 
     @GetMapping("/user")
     public String getUser(HttpServletRequest request) {
         HttpSession session = request.getSession();
         return "user" + " " + session.getId();
     }
-
+    @GetMapping("/admin")
+    public String getAdm(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        return "adm" + " " + session.getId();
+    }
+    @GetMapping("/manager")
+    public String getMng(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        return "adm" + " " + session.getId();
+    }
     @GetMapping("/data")
     public List<PersonInfo> getData() {
         return contextRepo.findAll();

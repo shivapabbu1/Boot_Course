@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Session Expired</title>
+</head>
+<body>
+    <h1>Session Expired</h1>
+    <p th:if="${username}">Your session has expired for user <span th:text="${username}"></span>. Please <a th:href="@{/login}">log in</a> again.</p>
+    <p th:unless="${username}">Your session has expired. Please <a th:href="@{/login}">log in</a> again.</p>
+</body>
+</html>

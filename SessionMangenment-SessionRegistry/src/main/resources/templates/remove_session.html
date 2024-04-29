@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Session</title>
+</head>
+<body>
+    <h1>Remove Session</h1>
+    <form th:action="@{/remove-session}" method="post">
+        <label for="sessionId">Session ID:</label>
+        <input type="text" id="sessionId" name="sessionId" required>
+        <button type="submit">Remove</button>
+    </form>
+</body>
+</html>
